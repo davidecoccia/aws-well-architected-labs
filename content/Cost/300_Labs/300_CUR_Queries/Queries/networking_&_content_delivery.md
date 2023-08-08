@@ -660,7 +660,7 @@ This query shows the daily cost and usage of all Public IPv4 addresses in the la
 Please refer to the [Public IPv4 Address Charge annoucement](https://aws.amazon.com/blogs/aws/new-aws-public-ipv4-address-charge-public-ip-insights/). Also read our new blog post, [Identify and Optimize Public IPv4 Address Usage on AWS](https://aws.amazon.com/blogs/networking-and-content-delivery/identify-and-optimize-public-ipv4-address-usage-on-aws/), for more information on how to make the best use of public IPv4 addresses.
 
 #### Download SQL File
-[Link to file](/Cost/300_CUR_Queries/Code/Networking_&_Content_Delivery/interface-endpoint-idle.sql)
+[Link to file](/Cost/300_CUR_Queries/Code/Networking_&_Content_Delivery/public-ipv4-costs.sql)
 
 #### Query Preview
 ```tsql
