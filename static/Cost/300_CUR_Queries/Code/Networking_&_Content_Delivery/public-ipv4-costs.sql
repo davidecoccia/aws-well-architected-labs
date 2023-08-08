@@ -13,4 +13,4 @@ and month in (date_format(date_trunc('month', current_date) - interval '1' month
 and "line_item_usage_type" like '%PublicIPv4%'
 and "line_item_line_item_type" = 'Usage'
 GROUP BY 1,2,3,4,5
-GROUP BY sum("line_item_usage_amount") desc
+ORDER BY sum("line_item_usage_amount") desc
