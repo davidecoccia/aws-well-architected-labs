@@ -674,7 +674,7 @@ SELECT
 	sum("line_item_usage_amount") usage_hours, 
 	sum("line_item_unblended_cost") actual_cost_usd,
 	sum("line_item_usage_amount")*0.005 projected_cost_usd
-FROM customer_all
+FROM ${table_name}
 WHERE 
 	year = cast(year(date_trunc('month', current_date) - interval '1' month) as varchar) 
 	and month in (date_format(date_trunc('month', current_date) - interval '1' month,'%m'),date_format(date_trunc('month', current_date) - interval '1' month,'%c'))
