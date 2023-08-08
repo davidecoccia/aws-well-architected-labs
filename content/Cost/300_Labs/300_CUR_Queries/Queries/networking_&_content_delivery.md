@@ -652,7 +652,7 @@ The [Pricing Calculator](https://calculator.aws/) is a useful tool for assisting
 [Back to Table of Contents](#table-of-contents)
 
 
-### Public IPv4 Costs
+### Public IPv4 Addresses Costs
 
 #### Query Description
 This query shows the daily cost and usage of all Public IPv4 addresses in the last month, split by payer and linked accounts. The column "projected_cost_usd" provides a preview of the amount charged after the [pricing change for Public IPv4 addresses](https://aws.amazon.com/blogs/aws/new-aws-public-ipv4-address-charge-public-ip-insights/) happening in February 2024
@@ -679,7 +679,7 @@ WHERE year = cast(year(date_trunc('month', current_date) - interval '1' month) a
  and "line_item_usage_type" like '%PublicIPv4%'
  and "line_item_line_item_type" = 'Usage'
  GROUP BY 1,2,3,4,5
- GROUP BY sum("line_item_usage_amount") desc
+ ORDER BY sum("line_item_usage_amount") desc
 ```
 
 {{< email_button category_text="Networking %26 Content Delivery" service_text="Network Usage" query_text="Public IPv4 Costs" button_text="Help & Feedback" >}}
